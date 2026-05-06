@@ -6,9 +6,7 @@ import PaymentFlow from "./PaymentFlow";
 import PassportStamp from "./PassportStamp";
 
 export default function Travelers() {
-  // Settlement: each owes half of total
-  const half = SPEND_TOTALS.total / 2;
-  const owedToAyushman = half - SPEND_TOTALS.dhwani; // positive ⇒ Dhwani owes A
+  const owedToAyushman = SPEND_TOTALS.ayushman - SPEND_TOTALS.dhwani;
   const settlementText =
     owedToAyushman > 0
       ? `Dhwani owes Ayushman ${formatINRk(Math.abs(owedToAyushman))}`
