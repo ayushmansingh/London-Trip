@@ -1,0 +1,107 @@
+@import "maplibre-gl/dist/maplibre-gl.css";
+@import "tailwindcss";
+
+@theme {
+  --color-paper:        #f4ead5;
+  --color-paper-dark:   #ebe2cf;
+  --color-paper-shade:  #e2d8be;
+  --color-ink:          #2b2419;
+  --color-ink-soft:     #5a4a35;
+  --color-ink-faded:    #8b7a5e;
+  --color-sepia:        #a0723a;
+  --color-burgundy:     #8b3a3a;
+  --color-forest:       #4a5c3a;
+  --color-oxford:       #1f3a5f;
+  --color-terracotta:   #b25a3a;
+
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-body:    "Lora", Georgia, serif;
+  --font-numeral: "EB Garamond", "Times New Roman", serif;
+}
+
+html, body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  /* Procedural paper grain via SVG, no asset needed */
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='5'/><feColorMatrix values='0 0 0 0 0.16  0 0 0 0 0.13  0 0 0 0 0.08  0 0 0 0.06 0'/></filter><rect width='180' height='180' filter='url(%23n)'/></svg>");
+  background-repeat: repeat;
+}
+
+::selection { background: var(--color-sepia); color: var(--color-paper); }
+
+.font-display { font-family: var(--font-display); }
+.font-numeral { font-family: var(--font-numeral); font-variant-numeric: oldstyle-nums tabular-nums; }
+
+/* Map overrides */
+.maplibregl-canvas { outline: none; }
+.maplibregl-ctrl-attrib { font-size: 9px; opacity: 0.5; }
+
+/* Sepia filter applied to OSM raster fallback. Subtle so tiles still read clearly. */
+.map-sepia .maplibregl-canvas {
+  filter: sepia(0.3) saturate(0.85) hue-rotate(-8deg);
+}
+
+/* Hand-drawn ornamental divider */
+.divider-fleur::before,
+.divider-fleur::after {
+  content: "";
+  flex: 1;
+  border-top: 1px dotted var(--color-ink-faded);
+  margin: 0 1.25rem;
+  margin-top: 0.6em;
+}
+.divider-fleur {
+  display: flex;
+  align-items: center;
+  color: var(--color-ink-faded);
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+/* Page-wide film grain over content */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='2' seed='9'/></filter><rect width='220' height='220' filter='url(%23n)' opacity='0.35'/></svg>");
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+}
+
+/* Section ornament */
+.act-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  letter-spacing: 0.2em;
+  color: var(--color-sepia);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* Stamp */
+.stamp {
+  border: 2px solid var(--color-burgundy);
+  color: var(--color-burgundy);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-family: var(--font-display);
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  transform: rotate(-6deg);
+  border-radius: 4px;
+  opacity: 0.85;
+  font-size: 0.8rem;
+}
+
+html { scroll-behavior: smooth; }
