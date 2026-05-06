@@ -7,7 +7,7 @@ export interface Day {
   stay: CityKey | "Flight";
   comment?: string;
   /** Optional secondary city focus for the map (e.g. Skye on May 24). */
-  focus?: CityKey;
+  focus?: string;
 }
 
 export const ITINERARY: Day[] = [
@@ -18,9 +18,9 @@ export const ITINERARY: Day[] = [
   { date: "2026-05-20", dayLabel: "20 May", plan: "Office",                            stay: "London" },
   { date: "2026-05-21", dayLabel: "21 May", plan: "Office",                            stay: "London" },
   { date: "2026-05-22", dayLabel: "22 May", plan: "Office",                            stay: "London" },
-  { date: "2026-05-23", dayLabel: "23 May", plan: "Reach Inverness by evening",        stay: "Inverness", focus: "Manchester",      comment: "Man City tickets booked. Long rail day." },
+  { date: "2026-05-23", dayLabel: "23 May", plan: "Manchester → Glasgow -> Inverness",        stay: "Inverness", focus: "Manchester",      comment: "Man City tickets booked. Long rail day." },
   { date: "2026-05-24", dayLabel: "24 May", plan: "Skye tour",                         stay: "Inverness", focus: "Skye",            comment: "Skye tour booked." },
-  { date: "2026-05-25", dayLabel: "25 May", plan: "Old Man of Storr & Kyle of Lochalsh", stay: "Inverness", focus: "Skye" },
+  { date: "2026-05-25", dayLabel: "25 May", plan: "Old Man of Storr & Kyle of Lochalsh", stay: "Inverness", focus: "Old Man of the Storr" },
   { date: "2026-05-26", dayLabel: "26 May", plan: "Glenfinnan Viaduct",                stay: "Edinburgh", focus: "Glenfinnan",      comment: "Glenfinnan tour booked." },
   { date: "2026-05-27", dayLabel: "27 May", plan: "Edinburgh",                         stay: "Edinburgh" },
   { date: "2026-05-28", dayLabel: "28 May", plan: "Edinburgh → London",                stay: "London" },
