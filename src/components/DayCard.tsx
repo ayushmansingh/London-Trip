@@ -53,8 +53,8 @@ export default function DayCard({ day, idx, active, onActivate }: Props) {
             </p>
           )}
 
-          {city?.blurb && (
-            <p className="text-sm text-ink-faded font-body italic mb-3">{city.blurb}</p>
+          {(day.blurb || city?.blurb) && (
+            <p className="text-sm text-ink-faded font-body italic mb-3">{day.blurb ?? city?.blurb}</p>
           )}
 
           <div className="flex gap-6 mt-4 text-sm font-numeral text-ink-soft">

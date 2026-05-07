@@ -20,7 +20,7 @@ export interface City {
 }
 
 export const CITIES: Record<CityKey, City> = {
-  London:     { key: "London",     label: "London",                  lat: 51.5074, lng: -0.1278, color: "#1f3a5f", blurb: "Home base. Office days, Tube cards, late-night chai." },
+  London:     { key: "London",     label: "London",                  lat: 51.5074, lng: -0.1278, color: "#1f3a5f", blurb: "Home base. Office days, late-night walks." },
   Manchester: { key: "Manchester", label: "Manchester",              lat: 53.4808, lng: -2.2426, color: "#8b3a3a", blurb: "Etihad Stadium pilgrimage." },
   Glasgow:    { key: "Glasgow",    label: "Glasgow",                 lat: 55.8642, lng: -4.2518, color: "#5a4a35", blurb: "A platform, a tea, and a connecting train." },
   Inverness:  { key: "Inverness",  label: "Inverness",               lat: 57.4778, lng: -4.2247, color: "#4a5c3a", blurb: "Gateway to Skye and the Highlands." },
