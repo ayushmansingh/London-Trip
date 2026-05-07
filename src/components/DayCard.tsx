@@ -23,7 +23,7 @@ export default function DayCard({ day, idx, active, onActivate }: Props) {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      className={`relative py-16 transition-all ${active ? "opacity-100" : "opacity-50"}`}
+      className={`relative py-8 md:py-16 transition-all ${active ? "opacity-100" : "opacity-50"}`}
     >
       <div className="flex items-start gap-5">
         <div className="font-display italic text-burgundy text-sm tracking-[0.2em] mt-1 w-8 text-right">
