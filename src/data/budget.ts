@@ -12,7 +12,7 @@ export interface BudgetCategory {
 export const BUDGET: BudgetCategory[] = [
   { name: "Stays",        budgeted: 216, actual: 190.4, color: "#1f3a5f" },
   { name: "Flights",      budgeted: 100, actual: 96,    color: "#8b3a3a" },
-  { name: "Tours",        budgeted: 60,  actual: 48,    color: "#4a5c3a" },
+  { name: "Tours",        budgeted: 60,  actual: 60.4,  color: "#4a5c3a" },
   { name: "Train Tickets",budgeted: 100, actual: 39,    color: "#a0723a" },
   { name: "Food",         budgeted: 80,  actual: null,  color: "#5a4a35" },
   { name: "Transport",    budgeted: 10,  actual: null,  color: "#7a6a55" },

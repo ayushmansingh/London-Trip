@@ -20,6 +20,7 @@ export const SPENDS: Spend[] = [
   { label: "Glenfinnan",         ayushman: 18.2, dhwani: 0,    category: "Tour" },
   { label: "Paid to Ayushman",   ayushman: 0,    dhwani: 25,   category: "Settle" },
   { label: "Cotswold Stay",      ayushman: 0,    dhwani: 10,   category: "Stay" },
+  { label: "Phantom of the Opera", ayushman: 12.4, dhwani: 0,  category: "Tour" },
 ];
 
 export const SPEND_TOTALS = {

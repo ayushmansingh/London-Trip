@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import Journey from "./components/Journey";
 import Numbers from "./components/Numbers";
 import Travelers from "./components/Travelers";
+import ClothesSection from "./components/ClothesSection";
 
 export default function App() {
   return (
@@ -11,7 +12,9 @@ export default function App() {
       <Journey />
       <ActDivider numeral="III" caption="The Numbers" />
       <Numbers />
-      <ActDivider numeral="IV" caption="Two Travelers" />
+      <ActDivider numeral="IV" caption="The Wardrobe" />
+      <ClothesSection />
+      <ActDivider numeral="V" caption="Two Travelers" />
       <Travelers />
       <Footer />
     </main>
